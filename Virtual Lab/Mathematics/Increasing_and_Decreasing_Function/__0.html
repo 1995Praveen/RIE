@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>प्रयोग | वर्धमान और ह्रासमान फलन </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Dr. Birendra Singh" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site exe-auto-math" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Skip navigation</a></p>
+<header id="header" ><div id="headerContent">वर्धमान और ह्रासमान फलन</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">वर्धमान और ह्रासमान फलन</a></li>
+   <li><a href="__.html" class="no-ch">अवधारणा</a></li>
+   <li id="active"><a href="__0.html" class="active no-ch">प्रयोग</a></li>
+   <li><a href="__1.html" class="no-ch">आकलन</a></li>
+   <li><a href="__2.html" class="no-ch">संदर्भ</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="__.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="__1.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">प्रयोग</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_telescope" id="id11">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_telescope.png)"><h1 class="iDeviceTitle">क्रियाकलाप</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta11_129_2" class="block iDevice_content">
+<div class="exe-text"><p>सामग्री:</p>
+<p>एक सफेद बोर्ड या चार्ट पेपर<br />रंगीन मार्कर<br />एक खिलौना कार (या छोटी गेंद)<br />मापक पट्टी (Scale)<br />ढलान (Slope) बनाने के लिए किताबें या कोई तख्ती<br />क्रियान्वयन:<br />प्रयोग की तैयारी:</p>
+<p>एक ढलान (Slope) तैयार करने के लिए कुछ किताबों को एक छोर पर रखकर उनके ऊपर एक बोर्ड या तख्ती रखें।<br />बोर्ड के बाएँ छोर को नीचे और दाएँ छोर को ऊपर रखें।<br />वर्धमान फलन को समझना:</p>
+<p>बाईं ओर से खिलौना कार छोड़ें और देखें कि यह ऊपर जाती है या नीचे।<br />छात्र देखेंगे कि यह नीचे नहीं जा रही, बल्कि ऊँचाई बढ़ रही है।<br />समझाएँ कि जब \(x\) बढ़ता है, तो \(y\) भी बढ़ता है। इसे वर्धमान फलन कहते हैं।<br />उदाहरण: \(y = x^2\), \(y = 2x + 3\)<br />ह्रासमान फलन को समझना:</p>
+<p>अब बोर्ड को उल्टा करें, जिससे बायाँ छोर ऊपर और दायाँ छोर नीचे हो।<br />खिलौना कार को फिर से छोड़ें और देखें कि यह कैसे नीचे लुढ़कती है।<br />समझाएँ कि जब \(x\) बढ़ता है, तो \(y\) घटता है। इसे ह्रासमान फलन कहते हैं।<br />उदाहरण: \(y = -x^2\), \(y = -3x + 5\)</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_teacher_screen" id="id12">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_teacher_screen.png)"><h1 class="iDeviceTitle">सिमुलेशन</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta12_130_2" class="block iDevice_content">
+<div class="exe-text"><p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+</p>
+<p>एक फलन चुनें और उसका ग्राफ देखें:</p>
+<p><select id="functionType">
+<option value="increasing">वर्धमान (y = x^2)</option>
+<option value="decreasing">ह्रासमान (y = -x^2)</option>
+</select><button onclick="plotFunction()">ग्राफ बनाएँ</button></p>
+<p><canvas id="graphCanvas" width="400" height="400"></canvas></p>
+<p>
+<script>
+function plotFunction() {
+    let ctx = document.getElementById("graphCanvas").getContext("2d");
+    ctx.clearRect(0, 0, 400, 400);
+    
+    let type = document.getElementById("functionType").value;
+    
+    let dataPoints = [];
+    for (let x = -10; x <= 10; x++) {
+        let y = type === "increasing" ? x * x : -x * x;
+        dataPoints.push({x, y});
+    }
+
+    new Chart(ctx, {
+        type: "scatter",
+        data: {
+            datasets: [{
+                label: type === "increasing" ? "वर्धमान (y = x^2)" : "ह्रासमान (y = -x^2)",
+                data: dataPoints,
+                borderColor: "blue",
+                showLine: true,
+                fill: false
+            }]
+        },
+        options: {
+            scales: {
+                x: { type: "linear", position: "bottom" },
+                y: { type: "linear", position: "left" }
+            }
+        }
+    });
+}
+</script>
+</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Licensed under the</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution Share Alike License 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="__.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="__1.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Made with eXeLearning<span> (New Window)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

@@ -1,0 +1,128 @@
+
+  .image-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #fff;
+  }
+  .image-container img {
+    max-width: 45%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .acknowledgement, .references {
+    text-align: center;
+    margin: 20px 0;
+    background-color: #fff;
+  }
+  .acknowledgement h3 {
+    text-align: justify;
+    margin: 0 20px;
+  }
+  .references {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../images_2025/pexels-photo-7130555.jpg');
+    
+  }
+  .reference-item {
+    display: flex;
+    width: 80%;
+    margin: 10px 0;
+    align-items: center;
+  }
+  .reference-item h3 {
+    margin: 0 10px;
+  }
+  .reference-item img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .marquee {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    overflow: hidden;
+  }
+  .marquee h3 {
+    margin: 0;
+    white-space: nowrap;
+    animation: scroll-left 10s linear infinite;
+  }
+  @keyframes scroll-left {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  .image-container  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-image: url('../images_2025/pexels-photo-7130555.jpg');
+  }
+  .image-container  img {
+    max-width: 20%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .image-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  .fixed-size {
+    width: 300px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+  }
+  
+  img {
+    max-width: 20%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+  }
+   img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  .references {
+    text-align: center;
+    margin: 20px 0;
+  }
+  .reference-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .reference-item h3 {
+    margin: 0;
+    flex: 1; /* Ensures text takes up equal space */
+    text-align: justify; /* Aligns text to the left */
+    gap: 30px;
+  }
+  .reference-item img {
+    max-width: 200px; /* Fixed size for all images */
+    height: auto; /* Maintains aspect ratio */
+    margin-left: 20px; /* Adds spacing between text and image */
+    border: 1px solid #ddd; /* Optional: Adds a border for better visibility */
+    border-radius: 8px; /* Optional: Rounds the corners of the image */
+  }
+  .center{
+    margin: 0;
+    flex: 1; /* Ensures text takes up equal space */
+    text-align: left; /* Aligns text to the left */
+    gap: 30px;
+  }

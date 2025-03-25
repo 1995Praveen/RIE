@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>प्रयोग | सीमा </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Dr. Birendra Singh" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site exe-auto-math" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Skip navigation</a></p>
+<header id="header" ><div id="headerContent">सीमा</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">सीमा</a></li>
+   <li><a href="__.html" class="no-ch">अवधारणा</a></li>
+   <li id="active"><a href="__0.html" class="active no-ch">प्रयोग</a></li>
+   <li><a href="__1.html" class="no-ch">आकलन</a></li>
+   <li><a href="__2.html" class="no-ch">संदर्भ</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="__.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="__1.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">प्रयोग</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_telescope" id="id11">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_telescope.png)"><h1 class="iDeviceTitle">क्रियाकलाप</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta11_127_2" class="block iDevice_content">
+<div class="exe-text"><p>सामग्री:</p>
+<p>एक काँच की पारदर्शी बोतल या जार<br />एक प्लास्टिक की गेंद या कंचा<br />पानी<br />एक मार्कर या टेप<br />क्रियान्वयन:<br />बोतल में पानी डालना:</p>
+<p>छात्रों से कहें कि वे बोतल में धीरे-धीरे पानी डालें।<br />हर बार पानी डालने के बाद, बोतल पर पानी के स्तर को मार्कर से चिह्नित करें।<br />सीमा का अनुभव:</p>
+<p>जैसे-जैसे पानी डाला जाएगा, उसका स्तर बढ़ता जाएगा।<br />एक समय के बाद, पानी बोतल की अधिकतम क्षमता के पास पहुँच जाएगा लेकिन बोतल को पूरा नहीं भरेगा।<br />यह सीमा की अवधारणा को दर्शाता है – पानी का स्तर बोतल की अधिकतम सीमा के करीब आता है लेकिन उसे पार नहीं करता।<br />चर्चा:</p>
+<p>"पानी का स्तर बोतल की सीमा के कितने करीब पहुँच सकता है?"<br />"अगर हम बहुत धीरे-धीरे पानी डालें, तो क्या हम इसे सीमा तक पहुँचा सकते हैं?"<br />"क्या हम इसे पूरी तरह भर सकते हैं?"</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_teacher_screen" id="id12">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_teacher_screen.png)"><h1 class="iDeviceTitle">सिमुलेशन</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta12_128_2" class="block iDevice_content">
+<div class="exe-text"><style>
+        #container {
+            position: relative;
+            width: 100px;
+            height: 200px;
+            border: 2px solid black;
+            background-color: lightblue;
+            margin-top: 20px;
+        }
+        #water {
+            position: absolute;
+            bottom: 0;
+            width: 100px;
+            height: 0;
+            background-color: blue;
+            transition: height 0.5s;
+        }
+    </style>
+<p>बटन दबाकर पानी का स्तर बढ़ाएँ और देखें कि यह बोतल की सीमा तक कैसे पहुँचता है।</p>
+<p><button onclick="increaseWater()">पानी डालें</button></p>
+<div id="container">
+<div id="water"></div>
+</div>
+<p>
+<script>
+let waterLevel = 0; // पानी का प्रारंभिक स्तर
+
+function increaseWater() {
+    if (waterLevel < 180) { // बोतल की अधिकतम सीमा 200px है
+        waterLevel += 20; 
+        document.getElementById("water").style.height = waterLevel + "px";
+    } else {
+        alert("पानी बोतल की सीमा के बहुत करीब पहुँच गया है, लेकिन इसे पूरी तरह नहीं भर सकते!");
+    }
+}
+</script>
+</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Licensed under the</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution Share Alike License 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="__.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="__1.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Made with eXeLearning<span> (New Window)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>
