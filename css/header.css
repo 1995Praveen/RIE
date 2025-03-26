@@ -1,58 +1,177 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header Section */
 .header {
-  display:flex;
-  justify-content:center
-  align-items: center;
+  display: flex;
+  justify-content: space-between; /* Logos को दोनों तरफ और text को बीच में रखता है */
+  align-items: center; /* Vertical alignment ठीक करता है */
   background: rgba(255, 255, 255, 0.9);
   padding: 10px 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 20px; /* Logos और text के बीच का space */
+  flex-wrap: nowrap; /* Prevents wrapping on medium screens */
 }
+
 .header img {
-  height: 80px;
+  max-height: 100px;
+  height: auto; /* Maintains aspect ratio */
+  max-width: 100px; /* Maximum logo size */
+  width: auto;
 }
-.header h1, .header h2, .header p {
+
+.header div {
+  flex-grow: 1; /* Center text को बीच में रखने के लिए */
   text-align: center;
-  margin: 5px 0;
 }
+
+.header h1,
+.header h2,
+.header p {
+  margin: 5px 0;
+  /*font-size: 1rem; /* Base font size */
+  line-height: 1.2; /* Improves readability */
+  color: maroon; /* Darker text for better visibility */
+}
+
+/* Menu Section */
 .menu {
   background: #14489E;
   padding: 10px;
   text-align: center;
 }
+
 .menu ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* Allows menu items to wrap on smaller screens */
+  gap: 10px; /* Adds spacing between menu items */
 }
+
 .menu ul li {
-  margin: 0 15px;
+  margin: 0 10px; /* Reduced spacing for mobile */
 }
+
 .menu ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  padding: 10px;
+  padding: 10px 15px;
+  font-size: 1rem; /* Base font size */
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
+
 .menu ul li a:hover {
   background: #2980b9;
   border-radius: 5px;
 }
-..header {
-  display: flex;
-  justify-content: space-between; /* Logos को दोनों तरफ और text को बीच में रखेगा */
-  align-items: center; /* Vertical alignment ठीक करेगा */
-  background: rgba(255, 255, 255, 0.9);
-  padding: 10px 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  gap: 20px; /* Logos और text के बीच का space */
+
+/* Content Section */
+.container {
+  padding: 20px;
 }
 
-.header img {
-  height: 80px; /* Logo की साइज़ */
-}
-
-.header div {
-  flex-grow: 1; /* Center text को बीच में रखने के लिए */
+.content h1 {
   text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem; /* Larger heading */
+}
+
+.content ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.content li {
+  margin-bottom: 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 787px) {
+  /* Header Adjustments */
+  .header {
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center; /* Center all content */
+    gap: 10px; /* Reduced spacing for mobile */
+    align-items: center; /* Ensures all elements stay centered */
+  }
+
+  .header img {
+    max-width: 80px; /* Smaller logos for mobile */
+  }
+
+  .header h1,
+  .header h2,
+  .header p {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+  }
+
+  /* Menu Adjustments */
+  .menu ul {
+    flex-direction: column; /* Stack menu items vertically */
+    gap: 5px; /* Reduced spacing between items */
+  }
+
+  .menu ul li {
+    margin: 0; /* No horizontal margins */
+  }
+
+  .menu ul li a {
+    padding: 8px 12px; /* Smaller padding for buttons */
+    font-size: 0.9rem; /* Even smaller font size for mobile */
+  }
+
+  /* Content Adjustments */
+  .content h1 {
+    font-size: 1.2rem; /* Slightly smaller heading */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Header Adjustments */
+  .header {
+    padding: 10px; /* Reduced padding for very small screens */
+  }
+
+  .header img {
+    max-width: 60px; /* Even smaller logos for very small screens */
+  }
+
+  .header h1,
+  .header h2,
+  .header p {
+    font-size: 0.8rem; /* Very small font size for tiny screens */
+  }
+
+  /* Menu Adjustments */
+  .menu ul li a {
+    padding: 6px 10px; /* Minimal padding for buttons */
+    font-size: 0.8rem; /* Minimal font size for buttons */
+  }
+
+  /* Content Adjustments */
+  .content h1 {
+    font-size: 1rem; /* Minimal heading size */
+  }
+
+  .content ul {
+    padding-left: 15px; /* Reduced padding for lists */
+  }
 }

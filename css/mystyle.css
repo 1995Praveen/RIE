@@ -1,8 +1,15 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    position: relative;  /* Overlay के लिए ज़रूरी */
+    position: relative; /* Overlay के लिए ज़रूरी */
 }
 
 body::before {
@@ -12,115 +19,177 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images_2025/tumblr_o515shCl8I1r4dhkuo1_500.gif');
+    background-image: url('../images_2025/Cwgf.gif');
     background-size: cover;
     background-position: center;
     opacity: 0.5; /* Transparency 50% */
-    z-index: -1;  /* इसे बैकग्राउंड में रखने के लिए */
+    z-index: -1; /* इसे बैकग्राउंड में रखने के लिए */
 }
 
 .container {
-    width: 80%;
+    width: 95%; /* Full width on mobile */
+    max-width: 1200px; /* Max width for larger screens */
     margin: 20px auto;
     background-color: #fff;
-    padding: 20px;
+    padding: 10px; /* Reduced padding for mobile */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-image: url('../images_2025/tumblr_o515shCl8I1r4dhkuo1_500.gif'); /* Add your image path here */
-    background-size: cover; /* Ensures the image covers the entire container */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; /* Centers the image */
-    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images_2025/tumblr_o515shCl8I1r4dhkuo1_500.gif');
+    background-size: cover;
+    background-position: center;
+    /*opacity: 0.5; /* Transparency 50% */
+    z-index: -1;
 }
 
 .subject-section {
     display: flex;
     justify-content: space-between;
     text-align: center;
-    padding: 10px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 15px; /* Adds spacing between items */
 }
+
 .subject {
-    width: 23%;
+    width: 100%; /* One item per row on mobile */
+    text-align: center;
 }
+
 .subject img {
-    width: 100%;
-    height: 180px;
+    width: 100%; /* Full width images */
+    height: auto; /* Maintains aspect ratio */
+    transition: transform 0.3s ease; /* Smooth hover effect */
 }
+
+.subject img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 .button-91 {
-    display: inline-block;
-    padding: 10px 20px;
+    display: block; /* Full-width buttons */
+    width: 100%; /* Button takes full width of the subject container */
+    max-width: 200px; /* Prevents button from becoming too wide */
+    margin: 10px auto 0; /* Centers the button */
+    padding: 10px; /* Padding inside the button */
     background-color: #2980b9;
     color: white;
     font-weight: bold;
     border: none;
     cursor: pointer;
     border-radius: 8px;
-    margin-top: 10px;
+    font-size: 16px; /* Base font size for mobile */
+    text-align: center; /* Ensures text is centered */
+    white-space: normal; /* Allows text to wrap if it overflows */
+    word-wrap: break-word; /* Breaks long words if necessary */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
 }
+
 .button-91:hover {
-    background-color:#38D2D2 ;}
-    .container {
-        width: 90%;
-        margin: auto;
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-    }
-    
-    .gif-container img {
-        width: 80%;
-        height: 250px;
-    }
-    
-    .content {
-        width: 100%;
-        text-align: left;
-       
-    }
-    
-    .heading {
-        color: rgb(245, 12, 12);
-        text-align: center;
-    }
-    
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    
-    ul li {
-        margin-bottom: 20px;
-    }
-    
-    ul li h2 {
-        font-size: 20px;
-        color: white;
-    }
-    
-    ul li p {
-        font-size: 16px;
-        color:white;
-    }
-    .subject-section img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
-.blink 
-{
-    animation: blinker 1.5s linear infinite;
-    color:red;
-    font-family:sans-serif;
+    background-color: #38D2D2;
 }
+
+.gif-container img {
+    width: 100%; /* Full width GIF */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.content {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+}
+
+.heading {
+    color: rgb(245, 12, 12);
+    text-align: center;
+    font-size: 24px; /* Adjusted for mobile */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 15px;
+}
+
+ul li h2 {
+    font-size: 18px; /* Smaller headings for mobile */
+    color: white;
+}
+
+ul li p {
+    font-size: 14px; /* Smaller paragraphs for mobile */
+    color: white;
+}
+
+.blink {
+    animation: blinker 1.5s linear infinite;
+    color: red;
+    font-family: sans-serif;
+    font-size: 16px; /* Adjusted for mobile */
+}
+
 @keyframes blinker {
-    50%{
+    50% {
         opacity: 0;
     }
-    
 }
- h1,h2{
+
+h1,h2 {
     color: maroon;
- }
+    font-size: 20px; /* Smaller headings for mobile */
+}
+
 .font {
-    color:blue;
+    color: blue;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (min-width: 768px) {
+    .subject {
+        width: calc(50% - 10px); /* Two items per row on tablets */
+    }
+
+    .button-91 {
+        font-size: 18px; /* Larger font size for tablets */
+    }
+
+    ul li h2 {
+        font-size: 20px; /* Larger headings for tablets */
+    }
+
+    ul li p {
+        font-size: 16px; /* Larger paragraphs for tablets */
+    }
+}
+
+@media (min-width: 1024px) {
+    .subject {
+        width: calc(25% - 15px); /* Four items per row on desktops */
+    }
+
+    .container {
+        padding: 20px; /* Increased padding for desktops */
+    }
+
+    .button-91 {
+        font-size: 20px; /* Larger font size for desktops */
+    }
+
+    ul li h2 {
+        font-size: 22px; /* Larger headings for desktops */
+    }
+
+    ul li p {
+        font-size: 18px; /* Larger paragraphs for desktops */
+    }
+}
+
+a {
+    text-decoration: none; /* Removes the underline */
 }
