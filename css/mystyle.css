@@ -140,7 +140,7 @@ ul li p {
 }
 
 h1,h2 {
-    color: maroon;
+    color: rgb(238, 230, 230);
     font-size: 20px; /* Smaller headings for mobile */
 }
 
@@ -192,4 +192,7 @@ h1,h2 {
 
 a {
     text-decoration: none; /* Removes the underline */
+}
+.Committee h2{
+    text-align: center;
 }

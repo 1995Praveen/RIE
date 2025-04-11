@@ -85,13 +85,15 @@
 <p>
 <script>
 let waterLevel = 0; // पानी का प्रारंभिक स्तर
+let speed = 100;
 
 function increaseWater() {
-    if (waterLevel < 180) { // बोतल की अधिकतम सीमा 200px है
-        waterLevel += 20; 
+    if (speed > 0) { // बोतल की अधिकतम सीमा 200px है
+        waterLevel += speed; 
         document.getElementById("water").style.height = waterLevel + "px";
+        speed = Math.floor(speed/2);
     } else {
-        alert("पानी बोतल की सीमा के बहुत करीब पहुँच गया है, लेकिन इसे पूरी तरह नहीं भर सकते!");
+        alert("पानी बोतल की सीमा के बहुत करीब पहुँच गया है। इसी प्रकार हम उस बिंदु के उत्तरोत्तर निकट जाते हैं जिस पर फलन की सीमा प्राप्त करनी है।");
     }
 }
 </script>

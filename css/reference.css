@@ -24,7 +24,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('../images_2025/pexels-photo-7130555.jpg');
+   /* background-image: url('../images_2025/pexels-photo-7130555.jpg');*/
+   background-color: rgba(241, 232, 222, 0.705);
     
   }
   .reference-item {
@@ -64,7 +65,8 @@
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
-    background-image: url('../images_2025/pexels-photo-7130555.jpg');
+    /*background-image: url('../images_2025/pexels-photo-7130555.jpg');*/
+    background-color: rgba(241, 232, 222, 0.705);
   }
   .image-container  img {
     max-width: 20%;
